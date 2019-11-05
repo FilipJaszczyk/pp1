@@ -1,5 +1,5 @@
-n = 500
 def suma(n):
-    if n >= 1:
+    if n > 0:
         return n + suma(n-1)
-print(suma(n))
+    return 0
+print(suma(500))
