@@ -1,3 +1,4 @@
+from statistics import median
 class Statystyka():
     
     def __init__(self,zbior):
@@ -10,21 +11,23 @@ class Statystyka():
         self.zbior.append(number)
     
     def maxval(self):
-        return max(self.zbior)
+        return f'Max: {max(self.zbior)}'
     
     def minval(self):
-        return min(self.zbior)
+        return f'Min: {min(self.zbior)}'
     
     def srednia(self):
-        return sum(self.zbior)/len(self.zbior)
+        return f'Srednia: {sum(self.zbior)/len(self.zbior)}'
     
+    def mediana(self):
+        return f'Mediana: {median(self.zbior)}'
     
 
 arr = Statystyka([1,2,3,4,5,6])
 print(arr)
 arr.add(9)
 print(arr)
-print(f'Max:{arr.maxval()}')
-print(f'Min:{arr.minval()}')
-print()
+print(arr.maxval())
+print(arr.minval())
+print(arr.mediana())
 
